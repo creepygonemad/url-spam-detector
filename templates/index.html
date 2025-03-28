@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Safety Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-shield-alt"></i> URL Safety Detector</h1>
+            <p>Check if a URL is safe or potentially malicious using ML-based detection</p>
+        </div>
+
+        <div class="url-form">
+            <div class="input-group">
+                <input type="url" id="urlInput" placeholder="Enter URL (e.g., https://example.com)">
+                <button id="checkButton">
+                    <i class="fas fa-search"></i> Analyze URL
+                </button>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analyzing URL security features...</p>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <h2>Security Analysis Results</h2>
+            </div>
+            <div class="result-content" id="resultContent">
+                
+            </div>
+            <div class="analysis-details" id="analysisDetails">
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
